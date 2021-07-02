@@ -1,0 +1,9 @@
+dist
+node_modules
+.env
+package-lock.json
+.env.staging
+.env.prod
+.env.dev
+.DS_Store
+debug.log

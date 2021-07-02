@@ -1,0 +1,36 @@
+@import './shared/responsive.scss';
+
+.alertBox {
+  z-index: 100;
+  position: fixed;
+  top: 30px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  color: $white;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 20px;
+  background-color: $themeRed;
+  box-shadow: 0 1px 7px 0 rgba(0, 43, 137, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  span {
+    flex-grow: 1;
+  }
+  &.error {
+    background-color: $backColor2;
+  }
+  &.success {
+    background-color: $themeGreen;
+  }
+  .cross {
+    margin: auto 10px;
+    cursor: pointer;
+    max-width: 50px;
+  }
+}

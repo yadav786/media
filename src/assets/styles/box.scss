@@ -1,0 +1,56 @@
+@import './shared/responsive.scss';
+
+.grid-whatsNew {
+  overflow-y: hidden;
+  display: block ruby;
+  display: -webkit-box;
+  .grid {
+    height: 100px;
+    flex-direction: row;
+    text-align: left;
+    margin-right: 16px;
+    display: -webkit-box;
+    margin-top: 10px;
+    margin-bottom: 8%;
+    cursor: pointer;
+    .box {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      padding: 7px 3px 3px 8px;
+      border-radius: 44px;
+      .main-image {
+        position: absolute;
+        top: 23px;
+        left: 17px;
+        max-width: 60px;
+        max-height: 40px;
+      }
+      .title {
+        font-family: ProximaNova;
+        text-align: center;
+        font-size: 14px;
+        color: #4c4c78;
+        margin-top: 8px;
+      }
+    }
+    &:nth-of-type(3n + 2) .box {
+      background-color: #5c7bff;
+      .inner {
+        border-color: #102da7;
+      }
+    }
+    &:nth-of-type(3n + 1) .box {
+      background-color: #ffbf41;
+      .inner {
+        border-color: #bf830b;
+      }
+    }
+    &:nth-of-type(3n) .box {
+      background-color: #f47979;
+      .inner {
+        border-color: #c10600;
+      }
+    }
+  }
+}

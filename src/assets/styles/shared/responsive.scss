@@ -1,0 +1,51 @@
+@import './colors.scss';
+
+//Screen Sizes
+$xxs: 568px; //For Mobile Only
+$xs: 767px; //Landscape mode on Mobile
+$sm: 768px; //Small Size pcs, tablet portrait
+$md: 1024px; //Medium Size, tablet Landscape end, pc sizes starts
+$lg: 1200px; //Large size
+
+@mixin breakpoint($min: 0, $max: 0) {
+  $type: type-of($min);
+  $class: $min;
+
+  @if $type == string {
+    @if $class == xxs {
+      @media (max-width: $xxs) {
+        @content;
+      }
+    } @else if $class == xs {
+      @media (max-width: $xs) {
+        @content;
+      }
+    } @else if $class == sm {
+      @media (min-width: $sm) {
+        @content;
+      }
+    } @else if $class == md {
+      @media (min-width: $md) {
+        @content;
+      }
+    } @else if $class == lg {
+      @media (min-width: $lg) {
+        @content;
+      }
+    } @else {
+      @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg";
+    }
+  } @else if $type == number {
+    $query: 'all' !default;
+    @if $min != 0 and $max != 0 {
+      $query: '(min-width: #{$min}) and (max-width: #{$max})';
+    } @else if $min != 0 and $max == 0 {
+      $query: '(min-width: #{$min})';
+    } @else if $min == 0 and $max != 0 {
+      $query: '(max-width: #{$max})';
+    }
+    @media #{$query} {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import './shared/responsive.scss';
+
+.dialogComponent {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  @include breakpoint(xs) {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    orientation: landscape !important;
+  }
+
+  .outerDiv {
+    width: 100%;
+    height: 100%;
+    @include breakpoint(xs) {
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      border-radius: 8%;
+      orientation: landscape !important;
+    }
+  }
+  .innerDiv {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: $white;
+    max-height: 100%;
+    max-width: 100%;
+    width: 50%;
+    height: 60%;
+    box-sizing: border-box;
+    padding: 25px 6%;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 4px solid black;
+    border-radius: 10px;
+    @include breakpoint(xs) {
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      orientation: landscape !important;
+    }
+
+    .cross {
+      text-align: right;
+      font-size: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .content {
+      top: 20%;
+      overflow-y: auto;
+      overflow-x: auto;
+      display: inline-block;
+      // position: absolute;
+      margin-bottom: 20px;
+      @include breakpoint(xs) {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        orientation: landscape !important;
+      }
+
+      .button-theme {
+        max-width: 100px;
+        width: 100%;
+        margin: 30px;
+        align-content: center;
+      }
+    }
+  }
+  &.wholeArea {
+    .innerDiv {
+      width: 70%;
+      height: 70%;
+      bottom: 15%;
+      margin: 0 auto;
+      padding: 0;
+      border: 4px solid black;
+      border-radius: 10px;
+      .cross {
+        display: none;
+      }
+      .content {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+        iframe {
+          border: none;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

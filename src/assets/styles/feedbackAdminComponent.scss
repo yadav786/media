@@ -1,0 +1,234 @@
+@import './shared/responsive.scss';
+
+.feedback-admin {
+  width: 70px;
+  height: 70px;
+  z-index: 3;
+  box-shadow: -1px 3px 2px 0 rgba(0, 6, 44, 0.16);
+  background-color: #ff895c;
+  border-radius: 50%;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  text-align: center;
+  margin: 1% 1%;
+  line-height: 51px;
+  color: #000000;
+  font-size: 14px;
+
+  @include breakpoint(xs) {
+    margin: 20% 3%;
+    font-size: 14px;
+  }
+
+  .admin-tag {
+    margin: 0 auto;
+    margin-top: 13%;
+    color: #ffff;
+    @include breakpoint(xs) {
+      margin: 0 auto;
+      margin-top: 13%;
+      color: #ffff;
+    }
+  }
+}
+
+.admin-table {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+
+  .count-box {
+    border-right: solid 1px #ffffff;
+    height: 75px;
+    opacity: 0.29;
+  }
+
+  .description {
+    font-family: SourceSansPro;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-around;
+  padding: 0% 5%;
+
+  @include breakpoint(xs) {
+    margin-top: 5%;
+  }
+
+  .header-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .back-button-icon {
+    width: 28.3px;
+    height: 23.1px;
+    object-fit: contain;
+    @include breakpoint {
+      margin: 0;
+    }
+  }
+}
+
+.List-of-ratings-div {
+  margin: 3% 15%;
+  border-radius: 16px;
+  background-color: #5c7bff;
+
+  @include breakpoint(xs) {
+    margin: 3% 1%;
+  }
+
+  .List-of-ratings {
+    font-family: SourceSansPro;
+    font-size: 25px;
+    padding: 1%;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.calendar-box {
+  padding: 3% 15%;
+  margin: 3% 0;
+  background-color: #ffe2e2;
+
+  .calendar-outer-box {
+    .feedback-summary {
+      height: 25px;
+      margin: 0 66px 23px 0;
+      font-family: SourceSansPro;
+      font-size: 18px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.39;
+      letter-spacing: normal;
+      text-align: left;
+      color: #1c1c1c;
+    }
+  }
+
+  .outer-date {
+    display: flex;
+    justify-content: space-evenly;
+    @include breakpoint(xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box-wala {
+      width: 188px;
+      height: 46px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 2px 1px 6px 0 rgba(36, 104, 255, 0.23);
+      @include breakpoint(xs) {
+        margin-bottom: 10px;
+      }
+
+      .react-date-picker__wrapper {
+        border: none;
+      }
+
+      .regional-val {
+        margin: 5% 7%;
+        position: relative;
+      }
+
+      .apply-button {
+        color: #ffffff;
+        background-color: #ff895c;
+        height: 46px;
+        width: 188px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.table-box {
+  padding: 3% 15%;
+  margin: 3% 0;
+  background-color: #e2edff;
+
+  @include breakpoint(xs) {
+    padding: 3% 0%;
+  }
+
+  .box {
+    width: 100%;
+    text-align: center;
+    font-family: ProximaNova;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4c4c78;
+
+    tr {
+      width: 308px;
+      height: 60px;
+      margin: 0 7px 7px 0;
+      padding: 14px 208px 14px 48px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    td {
+      text-align: center;
+      color: #4c4c78;
+      background-color: #ffffff;
+    }
+
+    .name-head {
+      background-color: #f47979;
+    }
+    .rating-head {
+      background-color: #5c7bff;
+    }
+    .desc-head {
+      background-color: #ffbf41;
+    }
+
+    .star-pattern {
+      color: #5c7bff;
+      @include breakpoint(xs) {
+        font-size: 10px;
+      }
+    }
+    .star-inactive {
+      color: #4c4c78;
+      @include breakpoint(xs) {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.hr {
+  opacity: 0.29;
+  border: solid 1px #ffffff;
+  height: 0;
+}

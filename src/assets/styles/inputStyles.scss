@@ -1,0 +1,76 @@
+@import './shared/responsive.scss';
+
+.formInput {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 12px 0;
+  position: relative;
+  font-family: 'Helvetica Neue', 'Open Sans';
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+    color: $inputText;
+    outline: none;
+    font-size: 18px;
+    line-height: 1.36;
+    padding: 25px 17px 9px 25px;
+    background-color: $backColor6;
+    border-radius: 34px;
+    border: none;
+    width: 100%;
+    transition: all 0.15s ease-in;
+    &:focus,
+    &.hasValue {
+      border-color: $themeBlue;
+    }
+    &.inputAdornment-left {
+      padding-left: 55px;
+    }
+  }
+  .label {
+    color: $inputLable;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 25px;
+    opacity: 0.5;
+    transition: all 0.2s ease-in;
+    &.inputAdornment-left {
+      margin-left: 55px;
+    }
+    &.hasValue {
+      color: $inputLable;
+      top: 28px;
+      padding: 0 2px;
+      opacity: 1;
+      font-size: 12px;
+      background-color: transparent;
+    }
+  }
+  input:focus + .label {
+    color: $inputLable;
+    top: 28px;
+    padding: 0 2px;
+    opacity: 1;
+    font-size: 12px;
+    background-color: transparent;
+  }
+  .inputAdornment {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    &.right {
+      background-color: $backColor6;
+    }
+    &.left {
+      color: $themeBlue;
+      left: 25px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import './shared/responsive.scss';
+
+.finWellnessHome {
+  @include breakpoint(xs) {
+    padding: 30px 8%;
+  }
+  width: 100%;
+  box-sizing: border-box;
+  .textType1 {
+    padding: 30px 0 20px 0;
+  }
+  .fwellness-banner {
+    width: 100%;
+    padding: 20px;
+    min-height: 160px;
+    height: auto;
+    box-sizing: border-box;
+    .white-button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: $white;
+      border-radius: 16px;
+      color: $textColor5;
+      font-size: 14px;
+      line-height: 1.21;
+      font-weight: bold;
+      font-family: ProximaNova, 'Montserrat', 'Open Sans';
+    }
+  }
+}

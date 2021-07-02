@@ -1,0 +1,134 @@
+@import './shared/responsive.scss';
+
+.header {
+  text-align: center;
+  padding-bottom: 3%;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.analytics {
+  padding: 3% 1%;
+  display: flex;
+  background-color: #ffe2e2;
+  @include breakpoint(xs) {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-side {
+    width: 60%;
+    padding-top: 3%;
+
+    .p-tag-header {
+      text-align: center;
+      color: cornflowerblue;
+    }
+
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+    .calendar {
+      display: flex;
+      justify-content: space-evenly;
+
+      @include breakpoint(xs) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        display: flex;
+        padding: 0% 3px;
+
+        .lable {
+          margin: 3% 0;
+        }
+
+        @include breakpoint(xs) {
+          flex-direction: column;
+          padding: 1% 3px;
+        }
+
+        .inner-box {
+          margin: 1%;
+          width: 188px;
+          height: 46px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 2px 1px 6px 0 rgba(36, 104, 255, 0.23);
+
+          .react-date-picker__wrapper {
+            border: none;
+            margin: 5% 12%;
+          }
+        }
+      }
+
+      .apply-button {
+        color: cornflowerblue;
+        background-color: aliceblue;
+        height: 100%;
+        width: 90px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+
+      .apply-button:hover {
+        color: #fff;
+        background-color: cornflowerblue;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .data-section {
+    padding-top: 3%;
+  }
+}
+
+.table-one {
+  table {
+    width: 90%;
+    overflow-x: auto;
+    margin: 10px auto;
+  }
+
+  caption {
+    font-size: 1em;
+    font-weight: 400;
+    padding: 10px 0;
+  }
+
+  thead th {
+    width: 10%;
+    font-weight: 400;
+    background: cornflowerblue;
+    color: #fff;
+  }
+
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+  }
+
+  tr:nth-child(even) {
+    background: #e8eeef;
+  }
+
+  th,
+  td {
+    text-align: center;
+    padding: 20px;
+    font-weight: 300;
+  }
+}
+.table-header {
+  text-align: center;
+}
